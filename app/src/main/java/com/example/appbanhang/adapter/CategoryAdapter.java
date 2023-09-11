@@ -1,6 +1,7 @@
 package com.example.appbanhang.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
+import com.example.appbanhang.activity.ViewAllActivity;
 import com.example.appbanhang.models.CategoryModel;
 
 import java.util.List;
@@ -36,6 +38,14 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         CategoryModel model=categoryModelList.get(position);
         Glide.with(context).load(model.getImg_url()).into(holder.imageView);
         holder.name.setText(model.getName());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, ViewAllActivity.class);
+                intent.putExtra("type",categoryModelList.get(position).getType());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -48,7 +58,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
         TextView name;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView=itemView.findViewById(R.id.category_img);
+            imageView=itemView.findViewById(R.id.viewall_img);
             name=itemView.findViewById(R.id.category_name);
         }
     }

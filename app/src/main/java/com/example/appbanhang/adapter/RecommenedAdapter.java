@@ -1,6 +1,7 @@
 package com.example.appbanhang.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
+import com.example.appbanhang.activity.ViewAllActivity;
 import com.example.appbanhang.models.RecommenedModel;
 
 import java.util.List;
@@ -39,6 +41,13 @@ public class RecommenedAdapter extends RecyclerView.Adapter<RecommenedAdapter.Vi
         holder.name.setText(model.getName());
         holder.description.setText(model.getDescription());
         holder.rating.setText(model.getRating());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override

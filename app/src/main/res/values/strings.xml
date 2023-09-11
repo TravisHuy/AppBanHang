@@ -7,22 +7,22 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Trang Chủ</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="facebook_app_id">632495145676144</string>
     <string name="fb_login_protocol_scheme">fb632495145676144</string>
     <string name="facebook_client_token">a8c5cfbaa67169878ae2759a08f19f1f</string>
-    <string name="fragment_profile">Profile</string>
-    <string name="fragment_category">Category</string>
-    <string name="profile">Profile</string>
-    <string name="category">Category</string>
+    <string name="fragment_profile">Hồ Sơ</string>
+    <string name="fragment_category">Sản phẩm</string>
+    <string name="profile">Hồ Sơ</string>
+    <string name="category">Sản Phẩm</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_offers">Offers</string>
-    <string name="offers">Offers</string>
-    <string name="new_products">New Products</string>
-    <string name="my_orders">My Orders</string>
-    <string name="my_carts">My Carts</string>
+    <string name="offers">Đơn Đặt</string>
+    <string name="new_products">Sản Phẩm Mới</string>
+    <string name="my_orders">Đơn Đặt</string>
+    <string name="my_carts">Giỏ Hàng</string>
 </resources>
