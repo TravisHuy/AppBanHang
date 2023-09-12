@@ -18,6 +18,7 @@ import com.example.appbanhang.activity.DetailedActivity;
 import com.example.appbanhang.activity.ViewAllActivity;
 import com.example.appbanhang.models.ViewAllModel;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHolder> {
@@ -41,8 +42,9 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
         holder.name.setText(viewAllList.get(position).getName());
         holder.description.setText(viewAllList.get(position).getDescription());
         holder.rating.setText(viewAllList.get(position).getRating());
-        holder.price.setText(String.valueOf(viewAllList.get(position).getPrice()));
-
+        DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
+        String formattedPrice=decimalFormat.format(viewAllList.get(position).getPrice());
+        holder.price.setText(formattedPrice);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,6 +70,7 @@ public class ViewAllAdapter extends RecyclerView.Adapter<ViewAllAdapter.ViewHold
             description=itemView.findViewById(R.id.viewall_des);
             rating=itemView.findViewById(R.id.viewall_rating);
             price=itemView.findViewById(R.id.viewall_price);
+
 
         }
     }
