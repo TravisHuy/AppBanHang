@@ -117,15 +117,13 @@ public class DetailedActivity extends AppCompatActivity {
         saveCurentTime=currentTime.format(calForDate.getTime());
 
         final HashMap<String,Object> cartMap=new HashMap<>();
+        cartMap.put("productImg",viewAllModel.getImg_url());
         cartMap.put("productName",viewAllModel.getName());
         cartMap.put("productPrice",viewAllModel.getPrice());
         cartMap.put("currentDate",saveCurrentDate);
         cartMap.put("currentTime",saveCurentTime);
         cartMap.put("totalQuantity",quantity.getText().toString());
-
-        DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
-        String formattedTotalPrice=decimalFormat.format(totalPrice);
-        cartMap.put("totalPrice",formattedTotalPrice);
+        cartMap.put("totalPrice",totalPrice);
         firestore.collection("AddToCart").document(auth.getCurrentUser().getUid())
                 .collection("CurrentUser").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                     @Override

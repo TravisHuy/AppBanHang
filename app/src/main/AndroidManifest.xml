@@ -16,6 +16,13 @@
         android:theme="@style/Theme.AppBanHang"
         tools:targetApi="31">
         <activity
+            android:name=".PlacedOrderActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activity.DetailedActivity"
             android:exported="false">
             <meta-data
