@@ -6,11 +6,12 @@ public class MyCartModel implements Serializable {
     String productName, currentDate, currentTime, totalQuantity;
     String productImg;
     int totalPrice, productPrice;
+    String documentId;
 
     public MyCartModel() {
     }
 
-    public MyCartModel(String productName, String currentDate, String currentTime, String totalQuantity, String productImg, int totalPrice, int productPrice) {
+    public MyCartModel(String productName, String currentDate, String currentTime, String totalQuantity, String productImg, int totalPrice, int productPrice,String documentId) {
         this.productName = productName;
         this.currentDate = currentDate;
         this.currentTime = currentTime;
@@ -18,6 +19,15 @@ public class MyCartModel implements Serializable {
         this.productImg = productImg;
         this.totalPrice = totalPrice;
         this.productPrice = productPrice;
+        this.documentId=documentId;
+    }
+
+    public String getDocumentId() {
+        return documentId;
+    }
+
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
     }
 
     public String getProductName() {

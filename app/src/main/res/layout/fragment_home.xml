@@ -23,6 +23,14 @@
             android:hint="Tìm sản phẩm mà bạn muốn"
             android:textStyle="bold"
             android:padding="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_rec"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -45,7 +45,7 @@ public class PlacedOrderActivity extends AppCompatActivity {
                         .collection("MyOrder").add(cartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                             @Override
                             public void onComplete(@NonNull Task<DocumentReference> task) {
-                                Toast.makeText(PlacedOrderActivity.this,"Added to A Cart",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PlacedOrderActivity.this,"Đơn hàng bạn đã được đặt",Toast.LENGTH_SHORT).show();
                             }
                         });
             }

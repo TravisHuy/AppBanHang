@@ -75,10 +75,13 @@ public class MyCartsFragment extends Fragment {
                         if(task.isSuccessful()){
                             for (DocumentSnapshot document:task.getResult().getDocuments()
                                  ) {
+                                String documentId=document.getId();
                                 MyCartModel model=document.toObject(MyCartModel.class);
+                                model.setDocumentId(documentId);
                                 cartList.add(model);
                                 adapter.notifyDataSetChanged();
                             }
+                            calculateTotalAmount(cartList);
                         }
                         else{
                             Toast.makeText(getActivity(),"error"+task.getException(),Toast.LENGTH_SHORT).show();
@@ -95,6 +98,18 @@ public class MyCartsFragment extends Fragment {
         });
         return root;
     }
+
+    private void calculateTotalAmount(List<MyCartModel> cartList) {
+
+        double totalAmount=0.0;
+        for (MyCartModel myCartModel :
+                cartList) {
+            totalAmount+=myCartModel.getTotalPrice();
+        }
+        overTotalAmount.setText("Total Amount: "+totalAmount);
+    }
+
+
     public BroadcastReceiver mMessageReceiver=new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {

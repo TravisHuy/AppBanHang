@@ -10,8 +10,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        >
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/my_primary"
         >
 
         <ImageView
@@ -154,5 +161,15 @@
                     />
             </LinearLayout>
         </LinearLayout>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete"
+        android:background="@color/my_primary"
+        />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
